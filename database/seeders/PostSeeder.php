@@ -29,6 +29,7 @@ class PostSeeder extends Seeder
                 'title' => $faker->sentence(4),
                 'slug' => Str::slug($title),
                 'content' => $faker->paragraph(),
+                // 'category_id' => .
             ]);
         }
     }
