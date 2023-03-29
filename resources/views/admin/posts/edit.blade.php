@@ -61,7 +61,7 @@
                             </div>
 
                             <div class="mb-2">
-                                <img src="{{ asset('storage'.$post->img) }}" alt="">
+                                <img src="{{ asset('storage/'.$post->img) }}" alt="">
                             </div>
                         @endif
 
