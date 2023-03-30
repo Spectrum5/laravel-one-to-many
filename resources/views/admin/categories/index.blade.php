@@ -25,7 +25,7 @@
                             <th scope="col">ID</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Slug</th>
-                            <th scope="col">?</th>
+                            <th scope="col"># Articoli</th>
                             <th scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -35,7 +35,11 @@
                                 <th scope="row">{{ $category->id }}</th>
                                 <td>{{ $category->title }}</td>
                                 <td>{{ $category->slug }}</td>
-                                <td>?</td>
+                                {{-- SELECT COUNT (*) FROM posts where category_id = $category->id --}}
+                                <td>{{ $category->posts()->count() }}</td>
+                                
+                                {{-- Alternativa per il il conteggio dei posts..
+                                <td>{{ count($category->posts) }}</td> --}}
                                 <td>
                                     <a href="{{ route('admin.categories.show', $category->id) }}" class="btn btn-primary">
                                         Dettagli
