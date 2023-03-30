@@ -65,6 +65,12 @@
                                     <i class="fa-solid fa-file-pen fa-lg fa-fw"></i> Posts
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.categories.index' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.categories.index') }}">
+                                    <i class="fa-solid fa-tags fa-lg fa-fw"></i> Categorie
+                                </a>
+                            </li>
                         </ul>
 
 
