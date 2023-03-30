@@ -19,7 +19,7 @@
                 Articoli associati ({{ $category->posts()->count() }})
             </h2>
 
-            @if ($category->posts)
+            @if ($category->posts()->count() > 0)
                 <ul>
                     @foreach ($category->posts as $post)
                         <li>
